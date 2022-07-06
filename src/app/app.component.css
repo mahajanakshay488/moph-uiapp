@@ -1,0 +1,39 @@
+
+a{
+    color: rgb(28, 28, 28);
+}
+.logout{
+    margin-left: 250px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    /* background-color:rgb(150, 184, 207); */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer p{
+    margin: 0;
+  }
+
+  .nav-align{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
