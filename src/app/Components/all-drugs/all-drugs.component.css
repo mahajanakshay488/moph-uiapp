@@ -1,9 +1,10 @@
 
 table{
 
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-width: 2;
 }
 td,th{
     text-align: center;
+    font-weight: 500;
 }

@@ -33,9 +33,10 @@ export class SubscribeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public cities:string[]=['Bangalore','Chennai','Hyderabad','Pune']
-  public meds:string[]=['Paracetmol','Citrazine','Aspirin']
-  public insurances:string[]=['Aditya Birla','Bajaj Allianz','Bharti AXA','IFFCO Tokio']
+  public cities:string[]=['Delhi','Ahamdabad','Pune', 'Chennai', 'Banglore'];
+  public meds:string[]=['Amlodipine','Acetaminophen','Buprenorphine',"Lisinopril",'Metformin','Tramadol','Paracetmol','Citrazine','Aspirin'];
+
+  public insurances:string[]=['Amol Shah','Abhi Birla','Jeen Danial','Mukesh Sharma'];
 handleSubmit()
 {
   console.log(this.prescriptionDetails);

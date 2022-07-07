@@ -18,14 +18,14 @@ constructor(private router:Router,public serve:AuthService)
 
   logout() {
     localStorage.removeItem("token");
-
-    console.log('removed')
+    console.log('removed');
     this.router.navigate(['/']);
   }
+
+  goLogin(){
+    this.router.navigate(['/loginModule']);
+  }
   
-
-
-
 }
 
 

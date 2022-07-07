@@ -5,7 +5,13 @@ p{
     color: red;
 }
 table{
-    border-color: black;
+
+    border-color: rgb(255, 255, 255);
+    border-width: 2;
+}
+thead, td{
+    text-align: center;
+    font-weight: 500;
 }
 
 h2{

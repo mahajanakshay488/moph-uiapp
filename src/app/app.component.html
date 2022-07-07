@@ -1,44 +1,43 @@
 
 
-<nav class="navbar navbar-expand-lg" style="background-color:rgb(255, 255, 255)">
-  <div class="container-fluid nav-align">
+<nav class="navbar bg-dark">
+  <div class="nav-align">
 
-    <a class="navbar-brand" href="#">Mail Order Pharmacy</a>
+    <a class="navbar-brand text-light" routerLink="/">MOPh</a>
     
         
       <ul class="navbar-nav links-center">
         <li class="nav-item">
-          <a class="nav-link active" routerLink='home' aria-current="page" href="#">Home</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='home' aria-current="page">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" routerLink='drugs' aria-current="page" href="#">Available Drugs</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='drugs' aria-current="page">Available Drugs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='search' href="#">Search Drug</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='search'>Search Drug</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='subscribe' href="#">Subscribe</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='subscribe'>Subscribe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='subscriptions' href="#">Subscriptions</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='subscriptions'>Subscriptions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='refillStatus' href="#">Refill Status</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='refillStatus'>Refill Status</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='refilldue' href="#">Refill Dues</a>
+          <a class="nav-link" routerLinkActive="activelink" routerLink='refilldue'>Refill Dues</a>
         </li>
       </ul>
     
       <div>
-        <button *ngIf="this.serve.isLoggedIn()" class="btn btn-light logout" (click)='logout()' href="#">Logout</button>
+        <button *ngIf="this.serve.isLoggedIn()" class="btn btn-light logout" (click)='logout()'>Logout</button>
+        <button *ngIf="!this.serve.isLoggedIn()" class="btn btn-primary" (click)="goLogin()">Login</button>
       </div>
 
   </div>
 </nav>
-<div class="mt-3">
- 
-<div class="container mt-2">
+<div class="main">
 
 
   <router-outlet></router-outlet>
@@ -46,5 +45,5 @@
 
 
 <div class="footer bg-dark">
-  <p>Site Designed and Developed By Pod-3 &copy; 2022</p>
+  <p>Website Developed By Pod-3 &copy; 2022.</p>
 </div>

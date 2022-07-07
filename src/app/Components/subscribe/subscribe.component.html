@@ -1,7 +1,7 @@
 <h2>Subscribe</h2>
 <h3>Prescription details</h3>
 
-<form (ngSubmit)='handleSubmit()'  ngNativeValidate>
+<form class="pb-3" (ngSubmit)='handleSubmit()'  ngNativeValidate>
     <div class="form-group form">
        
         <label>Insurance Provider</label>
@@ -39,13 +39,10 @@
 
         <br>
         
-        <p align:right>
-            <button class="btn btn-success" type="submit">Submit</button>
+        <p class="col-4">
+            <button class="form-control btn btn-primary" type="submit">Submit</button>
         </p>
         <br>
-        
-
     </div>
+    <p class="message" style="text-align: center;">{{msg}}</p>
 </form>
-<p class="message" style="text-align: center;">{{msg}}</p>
-<br><br>

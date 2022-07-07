@@ -1,9 +1,9 @@
 <h2>Search Drugs</h2>
 <div class="container d-flex">
     <form class="form-center"  (ngSubmit)='handleSubmitforID()' ngNativeValidate>
-        <div class="form-group form col-4">
-            <label>Search Drug by ID</label>
-            <input type="text" class="form-control" name="id" placeholder="Enter Drug ID" pattern="[D]{1}[1-9]{1,3}"
+        <div class="form-group form col-4 text-center">
+            <label class="text-success" style="font-weight: 600;" >Search Drug by ID</label>
+            <input type="text" class="form-control" name="id" placeholder="ex: 'D1'" pattern="[D]{1}[1-9]{1,3}"
                 [(ngModel)]='drugs.drugId' required>
             <br>
             <p align:right>
@@ -12,9 +12,9 @@
         </div>
     </form>
     <form class="form-center" (ngSubmit)='handleSubmitforName()' ngNativeValidate>
-        <div class="form-group form col-4">
-            <label>Search Drug by Name</label>
-            <input type="text" class="form-control" name="name" placeholder="Enter Drug Name" pattern="^[a-zA-Z_ ]*$"
+        <div class="form-group form col-4 text-center">
+            <label class="text-success" style="font-weight: 600;">Search Drug by Name</label>
+            <input type="text" class="form-control" name="name" placeholder="ex: 'Paracetamol'" pattern="^[a-zA-Z_ ]*$"
                 [(ngModel)]='drug.drugName' required>
             <br>
             <p align:right>
@@ -34,7 +34,7 @@
 
 <div *ngIf="fetched">
     <table class="table table-bordered table-hover">
-        <thead>
+        <thead class="bg-dark text-light"  >
             <tr>
                 <th>Drug Name</th>
                 <th>Manufactured By</th>
