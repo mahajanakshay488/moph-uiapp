@@ -47,6 +47,7 @@ handleSubmit()
      
     },error => {
       this.msg = "You have successfully subscribed to "+this.prescriptionDetails.drugName;
+      console.log(error);
       // this.router.navigate(['subscriptions']);
     })
 }

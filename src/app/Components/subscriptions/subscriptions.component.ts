@@ -50,7 +50,7 @@ export class SubscriptionsComponent implements OnInit {
   unsubed: boolean = false;
   unsubscribe(sId: string) {
     this.eservice.unsubscribe(this.mId, sId as unknown as number).subscribe(data => {
-      this.subscribed = false;
+      this.subscribed = true;
       this.unsubed = true;
       this.getAllSubscriptions();
       this.route.navigate(['home']);
@@ -62,11 +62,11 @@ export class SubscriptionsComponent implements OnInit {
     })
   }
 
-  showsubscriptions() {
-    this.subscribed = false
-    this.unsubed = false
+  // showsubscriptions() {
+  //   this.subscribed = false
+  //   this.unsubed = false
     
-    this.getAllSubscriptions()
-  }
+  //   this.getAllSubscriptions()
+  // }
 
 }

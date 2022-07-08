@@ -10,9 +10,6 @@
                 <th>Status</th>
                 <th>Location</th>
                 <th>Actions</th>
-                
-
-
             </tr>
         </thead>
         <tbody *ngFor='let sub of subscriptions'>
@@ -36,5 +33,5 @@
 </div>
 <div *ngIf="unsubed">
 <p>You have Successfully Unsubscribed</p>
-<button class="btn btn-info" (click)="showsubscriptions()">Show All Subscriptions</button>
+<!-- <button class="btn btn-info" (click)="showsubscriptions()">Show All Subscriptions</button> -->
 </div>

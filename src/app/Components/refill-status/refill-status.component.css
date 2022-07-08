@@ -1,7 +1,7 @@
-
+/* 
 div{
     margin-right: 300pt;
-}
+} */
 
 p{
     text-align: center;
@@ -14,7 +14,9 @@ p{
     color: red;
 }
 table{
-    border-color: black;
+ 
+    border-color: rgb(255, 255, 255);
+    border: 2px;
 }
 td,th{
     text-align: center;

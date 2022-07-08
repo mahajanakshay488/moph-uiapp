@@ -1,8 +1,8 @@
-<h2>Refill Status</h2>
+<h2 class="text-center mb-3">Refill Status</h2>
 
-<div *ngIf="tab">
+<div>
     <table class="table table-bordered table-hover">
-        <thead>
+        <thead class="bg-dark text-light">
             <tr>
                 <th>Subscription ID</th>
                 <th>Refill ID</th>
@@ -29,4 +29,10 @@
         
     </table>
 </div>
+
 <p class="error">{{errorMsg}}</p>
+<div *ngIf="loading" class="d-flex mt-5 justify-content-center">
+    <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

@@ -10,14 +10,14 @@ import { AuthService } from '../../Services/auth.service';
   styleUrls: ['./refill-status.component.css']
 })
 export class RefillStatusComponent implements OnInit {
-
+  loading:boolean=true;
   refillstatus:RefillStatus[]=[];
-  date!:Date
-  subID!:number
-  token!:string
-  refill:RefillStatus = new RefillStatus(0,0,"",true,this.date,0)
-  errorMsg:string=''
-  pay!:string
+  date!:Date;
+  subID!:number;
+  token!:string;
+  refill:RefillStatus = new RefillStatus(0,0,"",true,this.date,0);
+  errorMsg:string='';
+  pay!:string;
 
 
 
@@ -30,9 +30,9 @@ export class RefillStatusComponent implements OnInit {
   tab:boolean=false
   ngOnInit(): void {
     this.tab=false;
-    let id =parseInt(this.route.snapshot.paramMap.get('subid') || '{}')
-    this.subID=id
-    this.getRefillStatus(this.subID)
+    let id =parseInt(this.route.snapshot.paramMap.get('subid') || '{}');
+    this.subID=id;
+    this.getRefillStatus(this.subID);
   }
 
   getRefillStatus(subid:number){
@@ -42,21 +42,23 @@ export class RefillStatusComponent implements OnInit {
     this.rservice.getAllRefillStatus(subid).subscribe(
       (      data: RefillStatus[]) =>
       {
-        console.log(data)
-        this.refillstatus=data
-        console.log(this.refillstatus[0].refillDate.toDateString)
+        this.loading = false;
+        console.log(data);
+        this.refillstatus=data;
+        console.log(this.refillstatus[0].refillDate.toDateString);
         if(this.refillstatus[0].payStatus == true)
         {
-          this.pay='Unpaid'
+          this.pay='Unpaid';
         }
       }, (error: any)=>{
-        this.tab=false
-        this.errorMsg = "No Refill requests found"
+        this.tab=false;
+        this.errorMsg = "No Refill requests found";
+        this.loading = false;
     }
     )
   }
 
- /* handleSubmit(){
+ /*handleSubmit(){
     console.log(this.refill.subID)
     this.errorMsg=''
     this.getRefillStatus()
